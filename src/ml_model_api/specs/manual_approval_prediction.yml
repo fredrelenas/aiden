@@ -1,0 +1,24 @@
+tags:
+  - ManualApprovalPrediction
+
+definitions:
+  ManualApprovalPredictionSchema:
+    type: object
+    required:
+    - input_csv_file
+    properties:
+      input_csv_file: { type: string, description: 'CSV file containing input features' }
+
+parameters:
+  -
+    in: body
+    name: body
+    required: true
+    schema:
+      $ref: '#/definitions/ManualApprovalPredictionSchema'
+
+responses:
+  '200':
+    description: 'Forecast successful!'
+  '404':
+    description: 'Forecast not possible'
