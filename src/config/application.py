@@ -52,7 +52,7 @@ def create_app(config_name):
     url_prefix = '{prefix}/v{version}'.format(prefix=app.config['REST_URL_PREFIX'],
                                               version=app.config['API_VERSION_V1'])
 
-    from app import api_blueprint
+    from application import api_blueprint
 
     app.register_blueprint(
         api_blueprint,

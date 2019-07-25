@@ -23,4 +23,4 @@ init: penv-init tools
 
 start-wsgi:
 	source $(PY_ACTIVATE) && \
-	python3 app.py
+	python3 application.py
